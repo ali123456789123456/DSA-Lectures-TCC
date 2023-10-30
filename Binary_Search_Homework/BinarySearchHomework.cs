@@ -9,11 +9,32 @@ namespace Binary_Search_Homework // don't edit this line!!!
     public class BinarySearchHomework // don't edit this line!!!
     {
         public static int TernarySearch(int[] arr, int key, int start, int end) // don't edit this line!!!
-                                                                                // يمكنك تجاهل برمترات البداية والنهاية إذا لا تريد استخدام الطريقة العودية 
-                                                                                // لكن لاتقوم بحذفهم أو التعديل عليهم هنا تحت اي ظرف!!!
-                                                                                // من الممكن تمرير قيمة 0 لتجاهلهم
+                                                                  // من الممكن تمرير قيمة 0 لتجاهلهم
         {
             //TODO: write code for the ternary search algorithm and return the index of the element
+           if (end >= start)
+            {
+                int mid1 = start + (end - start) / 3;
+                int mid2 = end - (end - start) / 3;
+
+                if (arr[mid1] == key)
+                {
+                    return mid1;
+                }
+                if (arr[mid2] == key)
+                {
+                    return mid2;
+                }
+                if (key < arr[mid1])
+                {
+                    return Ternary_Sarch(arr, key, start, mid1 - 1);
+                }
+                if (key > arr[mid2])
+                {
+                    return Ternary_Sarch(arr, key, mid2 + 1, end);
+                }
+                return Ternary_Sarch(arr, key, mid1 + 1, mid2 - 1);
+            }
             return -1;
         }
 
