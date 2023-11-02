@@ -70,7 +70,7 @@ namespace Binary_Search_Homework // don't edit this line!!!
 
         }
 
-        public static int GetRepeatCount(int[] arr, int key) // don't edit this line!!!
+        public static int GetRepeatCount(int[] arr, int key) // don 't edit this line!!!
         {
             //TODO: write code to calculate the repeat count of a spacific element
             // make sure to use the previous method in this method
